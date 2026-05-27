@@ -3,6 +3,7 @@
 // page sections in order.
 // -----------------------------------------------------------------------------
 
+import { Analytics } from "@vercel/analytics/react";
 import DottedSurface from "./components/DottedSurface.jsx";
 import Nav from "./components/Nav.jsx";
 import Hero from "./components/Hero.jsx";
@@ -21,6 +22,7 @@ export default function App() {
       <BranchesSection />
       <OpenSourceSection />
       <SiteFooter />
+      <Analytics />
     </>
   );
 }
