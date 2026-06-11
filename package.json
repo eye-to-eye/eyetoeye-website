@@ -1,7 +1,7 @@
 {
   "name": "eye-to-eye",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.2.0",
   "type": "module",
   "description": "Eye to Eye — pediatric vision nonprofit landing page.",
   "scripts": {
@@ -10,14 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@vercel/analytics": "^2.0.1",
-    "gsap": "^3.12.5",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "three": "^0.160.0"
+    "@vercel/analytics": "^2.0.1"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^4.3.4",
     "vite": "^5.4.10"
   }
 }

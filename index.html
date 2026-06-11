@@ -3,17 +3,259 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Eye to Eye — Pediatric vision, advanced.</title>
+    <title>Eye to Eye: Pediatric vision, seen in time.</title>
+    <meta
+      name="description"
+      content="Eye to Eye is a student-led nonprofit building open-source AI screening tools and advancing access to pediatric eye care for underserved communities."
+    />
+    <meta property="og:title" content="Eye to Eye" />
+    <meta
+      property="og:description"
+      content="Open-source AI screening and global advocacy for pediatric eye health."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 7C9 7 4.2 13 3 16c1.2 3 6 9 13 9s11.8-6 13-9c-1.2-3-6-9-13-9z' fill='none' stroke='%230f8c7c' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%232f6fc2'/%3E%3Ccircle cx='16' cy='16' r='2' fill='%230a1322'/%3E%3C/svg%3E"
+    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,wght@0,400;0,500;1,300;1,400;1,500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Public+Sans:ital,wght@0,400..700;1,400..700&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <!-- ===================== NAV ===================== -->
+    <header class="nav" id="nav">
+      <a class="nav__brand" href="#top" aria-label="Eye to Eye, back to top">
+        <span class="nav__mark"><img src="/assets/logo.jpg" alt="" width="512" height="512" /></span>
+        <span class="nav__wordmark">Eye to Eye</span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="https://github.com/eye-to-eye" target="_blank" rel="noopener">GitHub</a>
+        <a class="nav__contact" href="mailto:eyetoeyehealth@gmail.com">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <!-- ===================== HERO ===================== -->
+      <section class="hero" aria-label="Introduction">
+        <div class="hero__inner">
+          <div class="hero__copy">
+            <p class="hero__kicker reveal">Eye to Eye</p>
+            <h1 class="hero__title reveal d1">
+              Every child deserves <em>to be seen.</em>
+            </h1>
+            <p class="hero__mission reveal d2">
+              We work to catch childhood vision loss before it becomes
+              permanent. We do it through research, open-source AI screening
+              tools, and advocacy for communities without access to pediatric
+              eye care.
+            </p>
+            <div class="hero__cta reveal d3">
+              <a class="btn btn--solid" href="mailto:eyetoeyehealth@gmail.com">
+                Get Involved
+              </a>
+              <a
+                class="btn btn--outline"
+                href="https://github.com/eye-to-eye"
+                target="_blank"
+                rel="noopener"
+              >
+                View GitHub
+              </a>
+            </div>
+          </div>
+          <div class="hero__visual" aria-hidden="true">
+            <canvas class="hero__iris" id="iris"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== PROBLEM ===================== -->
+      <section class="problem" id="problem" aria-labelledby="problem-heading">
+        <div class="container">
+          <p class="kicker reveal">The problem</p>
+          <div class="problem__grid">
+            <h2 class="problem__headline reveal" id="problem-heading">
+              Most childhood vision loss is preventable or treatable,
+              <em>if it&rsquo;s caught in time.</em>
+            </h2>
+            <div class="problem__body reveal d1">
+              <p>
+                The window for treatment is narrow. Conditions like amblyopia
+                and congenital cataract must be found in the first years of
+                life, and the vast majority of affected children live in
+                communities with little or no access to pediatric
+                ophthalmology.
+              </p>
+              <p>
+                A child who is never screened is never diagnosed, and a child
+                never diagnosed may lose sight that medicine already knows how
+                to save.
+              </p>
+            </div>
+          </div>
+
+          <dl class="problem__stats">
+            <div class="problem__stat reveal">
+              <dt>Children worldwide living with a sight condition that needs treatment</dt>
+              <dd>450&nbsp;million</dd>
+            </div>
+            <div class="problem__stat reveal d1">
+              <dt>Children and adolescents living with sight loss today</dt>
+              <dd>90&nbsp;million</dd>
+            </div>
+            <div class="problem__stat reveal d2">
+              <dt>Of children with vision impairment live in low- and middle-income countries</dt>
+              <dd>9 in 10</dd>
+            </div>
+          </dl>
+          <p class="problem__note reveal">
+            Estimates from the International Agency for the Prevention of Blindness (IAPB).
+          </p>
+        </div>
+      </section>
+
+      <!-- ===================== BRANCHES ===================== -->
+      <section class="branches" id="branches" aria-labelledby="branches-heading">
+        <div class="container">
+          <p class="kicker reveal">How we work</p>
+          <h2 class="section-title reveal" id="branches-heading">
+            Branches
+          </h2>
+
+          <div class="branches__grid">
+            <article class="branch reveal">
+              <div class="branch__icon" aria-hidden="true">
+                <!-- microscope -->
+                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 7l8 8-9 9-8-8z" />
+                  <path d="M14 21l-3 3" />
+                  <path d="M25 18c7 2 10 8 8 14-1.6 5-6 8-11 8" />
+                  <path d="M10 40h28" />
+                  <path d="M18 35h10" />
+                </svg>
+              </div>
+              <p class="branch__label">Branch 01</p>
+              <h3 class="branch__title">Biological &amp; Optical Research</h3>
+              <p class="branch__text">
+                Studying the science behind pediatric eye conditions: how they
+                develop, how they present, and how they can be detected earlier.
+              </p>
+            </article>
+
+            <article class="branch reveal d1">
+              <div class="branch__icon" aria-hidden="true">
+                <!-- chip -->
+                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="13" y="13" width="22" height="22" rx="3" />
+                  <rect x="20" y="20" width="8" height="8" rx="1.5" />
+                  <path d="M18 13V6M24 13V6M30 13V6M18 42v-7M24 42v-7M30 42v-7M13 18H6M13 24H6M13 30H6M42 18h-7M42 24h-7M42 30h-7" />
+                </svg>
+              </div>
+              <p class="branch__label">Branch 02</p>
+              <h3 class="branch__title">Computational Engineering &amp; AI</h3>
+              <p class="branch__text">
+                Building open-source screening and detection tools, so early
+                diagnosis doesn&rsquo;t depend on having a specialist nearby.
+              </p>
+            </article>
+
+            <article class="branch reveal d2">
+              <div class="branch__icon" aria-hidden="true">
+                <!-- globe -->
+                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="24" cy="24" r="17" />
+                  <path d="M7 24h34" />
+                  <path d="M24 7c5 4.5 7.5 10.5 7.5 17S29 36.5 24 41c-5-4.5-7.5-10.5-7.5-17S19 11.5 24 7z" />
+                </svg>
+              </div>
+              <p class="branch__label">Branch 03</p>
+              <h3 class="branch__title">Global Health Advocacy</h3>
+              <p class="branch__text">
+                Fundraising and awareness for pediatric eye care access,
+                bringing screening to the communities that need it most.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== OPEN SOURCE ===================== -->
+      <section class="oss" id="open-source" aria-labelledby="oss-heading">
+        <div class="container oss__layout">
+          <div class="oss__copy">
+            <p class="kicker kicker--light reveal">Open by principle</p>
+            <h2 class="section-title section-title--light reveal" id="oss-heading">
+              Everything we build is free to use.
+            </h2>
+            <p class="oss__text reveal d1">
+              Every tool we release ships under the MIT or Apache&nbsp;2.0
+              license, so any clinic, NGO, or researcher anywhere in the world
+              can use it, study it, and build on it, at no cost and with no
+              gatekeeping. Sight shouldn&rsquo;t have a paywall.
+            </p>
+            <div class="oss__licenses reveal d2" aria-label="Licenses">
+              <span class="oss__chip">MIT License</span>
+              <span class="oss__chip">Apache 2.0</span>
+            </div>
+            <a
+              class="btn btn--light reveal d2"
+              href="https://github.com/eye-to-eye"
+              target="_blank"
+              rel="noopener"
+            >
+              Visit our GitHub
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== FOOTER ===================== -->
+      <footer class="footer" id="contact" aria-labelledby="footer-heading">
+        <div class="container">
+          <div class="footer__grid">
+            <div class="footer__brand">
+              <a class="nav__brand" href="#top" aria-label="Eye to Eye, back to top">
+                <span class="nav__mark"><img src="/assets/logo.jpg" alt="" width="512" height="512" /></span>
+                <span class="nav__wordmark">Eye to Eye</span>
+              </a>
+              <p class="footer__tagline">
+                See the problem. Solve it together.
+              </p>
+            </div>
+
+            <div class="footer__col">
+              <h3 class="footer__heading" id="footer-heading">Contact</h3>
+              <a class="footer__link" href="mailto:eyetoeyehealth@gmail.com">
+                eyetoeyehealth@gmail.com
+              </a>
+              <span class="footer__link footer__link--static">eyetoeye.health</span>
+            </div>
+
+            <div class="footer__col">
+              <h3 class="footer__heading">Code</h3>
+              <a
+                class="footer__link"
+                href="https://github.com/eye-to-eye"
+                target="_blank"
+                rel="noopener"
+              >
+                github.com/eye-to-eye
+              </a>
+              <span class="footer__link footer__link--static">MIT / Apache 2.0 licensed</span>
+            </div>
+          </div>
+
+          <div class="footer__bottom">
+            <span>© <span id="year">2026</span> Eye to Eye. A student-led nonprofit for pediatric vision.</span>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>
