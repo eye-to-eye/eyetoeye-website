@@ -435,22 +435,6 @@ a {
   box-shadow: 0 14px 34px -24px rgba(24, 40, 64, 0.35);
 }
 
-.branch__icon {
-  width: 3.2rem;
-  height: 3.2rem;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  color: var(--ink);
-  border: 1px solid var(--line);
-  margin-bottom: 1.5rem;
-}
-
-.branch__icon svg {
-  width: 1.7rem;
-  height: 1.7rem;
-}
-
 .branch__label {
   font-size: 0.74rem;
   font-weight: 600;

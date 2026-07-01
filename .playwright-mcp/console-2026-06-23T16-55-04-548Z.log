@@ -1,0 +1,6 @@
+[    3431ms] [ERROR] Refused to get unsafe header "X-Sg-Cs" @ https://www.google.com/search?q=&sourceid=chrome&ie=UTF-8&udm=50&aep=48&cud=0&qsubts=1782233707405&source=chrome.crn.obic:46
+[    3431ms] [ERROR] Refused to get unsafe header "X-Sorry-Redirect" @ https://www.google.com/search?q=&sourceid=chrome&ie=UTF-8&udm=50&aep=48&cud=0&qsubts=1782233707405&source=chrome.crn.obic:46
+[    3555ms] [ERROR] Refused to get unsafe header "X-Sg-Cs" @ https://www.google.com/search?q=&sourceid=chrome&ie=UTF-8&udm=50&aep=48&cud=0&qsubts=1782233707405&source=chrome.crn.obic:46
+[    3555ms] [ERROR] Refused to get unsafe header "X-Sorry-Redirect" @ https://www.google.com/search?q=&sourceid=chrome&ie=UTF-8&udm=50&aep=48&cud=0&qsubts=1782233707405&source=chrome.crn.obic:46
+[    4405ms] [ERROR] Refused to get unsafe header "X-Sg-Cs" @ https://www.google.com/search?q=&sourceid=chrome&ie=UTF-8&udm=50&aep=48&cud=0&qsubts=1782233707405&source=chrome.crn.obic:46
+[    4405ms] [ERROR] Refused to get unsafe header "X-Sorry-Redirect" @ https://www.google.com/search?q=&sourceid=chrome&ie=UTF-8&udm=50&aep=48&cud=0&qsubts=1782233707405&source=chrome.crn.obic:46
